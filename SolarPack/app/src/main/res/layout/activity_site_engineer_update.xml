@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pragyaware.anu.solarpack.mActivity.ApproverDetailActivity">
+
+    <include layout="@layout/app_new_layout" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/details" />
+
+                <com.pragyaware.anu.solarpack.mUtil.TextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    android:text="@string/project_detail"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- <com.pragyaware.anu.solarpack.mUtil.TextViewBold
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:padding="5dp"
+                     android:text="@string/user_detail"
+                     android:textColor="@color/colorAccent"
+                     android:textSize="16sp" />-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.CEditText
+                            android:id="@+id/districtTxtVw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/district_1"
+                            android:inputType="textAutoComplete"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                   <!-- <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="@string/district_1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+                    <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:id="@+id/districtTxtVw"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />-->
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.CEditText
+                            android:id="@+id/blockTxtVw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/block"
+                            android:inputType="textAutoComplete"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                  <!--  <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="@string/block"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+                    <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:id="@+id/blockTxtVw"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.CEditText
+                            android:id="@+id/villageTxtVw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/village"
+                            android:inputType="textAutoComplete"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                <!--    <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="@string/village"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+                    <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:id="@+id/villageTxtVw"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />-->
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.CEditText
+                            android:id="@+id/projectType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/project_typr"
+                            android:inputType="textAutoComplete"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                  <!--  <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="@string/project_typr"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+                    <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:id="@+id/projectType"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.CEditText
+                            android:id="@+id/locationTxtVw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/location_type"
+                            android:inputType="textAutoComplete"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                  <!--  <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="@string/location_type"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+                    <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:id="@+id/locationTxtVw"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />-->
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.CEditText
+                            android:id="@+id/nameTxtVw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/beneficary_name"
+                            android:inputType="textAutoComplete"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                  <!--  <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="@string/beneficary_name"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+                    <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:id="@+id/nameTxtVw"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.CEditText
+                            android:id="@+id/mobileTxtVw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/mobile_no_new"
+                            android:inputType="textAutoComplete"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                  <!--  <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="@string/mobile_no_new"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+                    <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:id="@+id/mobileTxtVw"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.CEditText
+                            android:id="@+id/kycType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="@string/kyc_type"
+                            android:inputType="textAutoComplete"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                <!--    <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="@string/kyc_type"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+                    <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                        android:id="@+id/kycType"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp" />-->
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.pragyaware.anu.solarpack.mUtil.CEditText
+                        android:id="@+id/kycId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:hint="@string/kyc_id"
+                        android:inputType="textAutoComplete"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+             <!--   <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="@string/kyc_id"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
+
+                <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                    android:id="@+id/kycId"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.pragyaware.anu.solarpack.mUtil.CEditText
+                        android:id="@+id/dateTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:hint="@string/date"
+                        android:inputType="textAutoComplete"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+              <!--  <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="@string/date"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
+
+                <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                    android:id="@+id/dateTime"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                    android:id="@+id/track_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button"
+                    android:padding="5dp"
+                    android:drawableLeft="@drawable/location"
+                    android:drawablePadding="5dp"
+                    android:textAlignment="center"
+                    android:text="@string/track_location"
+                    android:textColor="@color/ms_white"
+                    android:textSize="14sp"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+
+            <com.pragyaware.anu.solarpack.mUtil.TextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="@string/kyc_photograph"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/ms_white"
+                android:elevation="6dp"
+                android:padding="5dp"
+                tools:targetApi="lollipop">
+
+
+                <ImageView
+                    android:id="@+id/kycImgVw"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="5dp" />
+
+            </android.support.v7.widget.CardView>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimaryDark" />
+
+            //TODO No of MileStone populate
+            <LinearLayout
+                android:id="@+id/milestoneLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#e8e8e8"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp"
+                tools:ignore="UselessParent">
+
+
+                <LinearLayout
+                    android:id="@+id/l4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/milestone"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                        <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                            android:id="@+id/milestoneTxtVw"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/status"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                        <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                            android:id="@+id/statusTxtVw"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/approver"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                        <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                            android:id="@+id/approveTxtVw"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/approver_remark"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                        <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                            android:id="@+id/approve_remark"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tv_remarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp"
+                            android:textStyle="bold">
+
+                            <com.pragyaware.anu.solarpack.mUtil.CEditText
+                                android:id="@+id/ed_remarks"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/colorAccent"
+                                android:hint="@string/remarks"
+                                android:padding="10dp"
+                                android:inputType="textMultiLine"
+                                android:lines="2"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textColorHint="@color/colorPrimaryDark"
+                                android:textSize="16sp"
+                                tools:targetApi="lollipop" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="5dp"
+                                android:text="@string/photographs_of_the_equipment"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="15sp" />
+
+
+                            <ImageView
+                                android:id="@+id/captureImgVw"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:contentDescription="@string/app_name"
+                                android:padding="5dp"
+                                android:src="@drawable/photo_camera"
+                                tools:ignore="RtlHardcoded" />
+
+                        </LinearLayout>
+
+
+                        <GridView
+                            android:id="@+id/photoGrid"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:horizontalSpacing="10dp"
+                            android:numColumns="3"
+                            android:padding="5dp"
+                            android:verticalSpacing="10dp"
+                            tools:ignore="NestedScrolling" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_bg"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    android:textColor="#ffffff" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

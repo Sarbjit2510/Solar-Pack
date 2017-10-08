@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_new_layout" />
+
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/newspaper" />
+
+        <com.pragyaware.anu.solarpack.mUtil.TextViewBold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="3"
+            android:text="@string/submit_txt"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded" />
+
+    </LinearLayout>
+
+    <com.stepstone.stepper.StepperLayout
+        android:id="@+id/stepperLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:ms_completeButtonText=""
+        app:ms_nextButtonColor="#233d4d"
+        app:ms_backButtonColor="#233d4d"
+        app:ms_completeButtonColor="@color/colorPrimaryDark"
+        app:ms_stepperType="dots" />
+
+
+</LinearLayout>

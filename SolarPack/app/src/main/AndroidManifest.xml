@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pragyaware.anu.solarpack">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".mApplication.MyApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".mActivity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mActivity.SubmitInstallationReport" />
+        <activity android:name=".mActivity.ViewReportActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.pragyaware.anu.solarpack.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".mActivity.LoginActivity" />
+        <activity
+            android:name=".mActivity.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/MyTheme" />
+        <activity android:name=".mActivity.ChangePasswordActivity" />
+        <activity android:name=".mActivity.ProjectApprovalActivity" />
+        <activity android:name=".mActivity.PreviewActivity" />
+        <activity
+            android:name=".mActivity.SiteEngineer"
+            android:theme="@style/MyTheme" />
+        <activity android:name=".mActivity.ApprovedActivity" />
+        <activity
+            android:name=".mActivity.DashboardActivity"
+            android:theme="@style/MainTheme" />
+        <activity android:name=".mActivity.ApproverDetailActivity" />
+        <activity android:name=".mActivity.SiteEnggActivity" />
+        <activity android:name=".mActivity.SiteEngineerUpdate" />
+        <activity android:name=".mActivity.SiteEnggFullUpdate" />
+    </application>
+
+</manifest>

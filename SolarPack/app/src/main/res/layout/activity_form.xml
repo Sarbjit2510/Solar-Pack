@@ -1,0 +1,607 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".mActivity.FormActivity">
+
+    <include layout="@layout/app_new_layout"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:id="@+id/l2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/please_select_the_category"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp" />
+
+                <!--<com.pragyaware.anu.solarpack.mUtil.TextViewRegular-->
+                <!--android:id="@+id/projectType"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:padding="5dp"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:textColor="@color/colorAccent"-->
+                <!--android:textSize="16sp"-->
+                <!--android:text="@string/action_settings"/>-->
+
+                <RadioGroup
+                    android:id="@+id/catRadioGrp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <RadioButton
+                        android:id="@+id/solarRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/custom_radio"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/solar_park"
+                        android:textColor="@color/colorPrimaryDark" />
+
+
+                    <RadioButton
+                        android:id="@+id/streetRadio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:button="@drawable/custom_radio"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/street_light"
+                        android:textColor="@color/colorPrimaryDark"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/l3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tv_namee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp">
+
+                    <com.pragyaware.anu.solarpack.mUtil.CEditText
+                        android:id="@+id/ed_namee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="@string/name"
+                        android:inputType="textAutoComplete"
+                        android:padding="10dp"
+                        android:maxLength="20"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        tools:targetApi="lollipop" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:text="@string/kyc_type"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/kyc_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:padding="5dp" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tv_kfc_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp">
+
+                    <com.pragyaware.anu.solarpack.mUtil.CEditText
+                        android:id="@+id/ed_kfc_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="@string/kyc_id"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="15"
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        tools:targetApi="lollipop" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.pragyaware.anu.solarpack.mUtil.TextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/kyc_photograph"
+                    android:padding="5dp"/>
+
+                <ImageView
+                    android:id="@+id/kycImgVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/add_image"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/app_name" />
+
+                <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:text="@string/district"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/dist_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:padding="5dp" />
+
+
+                <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:text="@string/division"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/divsion_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:padding="5dp" />
+
+                <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:text="@string/sub_division"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/subDiv_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:padding="5dp" />
+
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tv_village"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+
+                    <com.pragyaware.anu.solarpack.mUtil.CEditText
+                        android:id="@+id/ed_village"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="@string/village"
+                        android:padding="10dp"
+                        android:maxLength="20"
+                        android:inputType="textAutoCorrect"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        tools:targetApi="lollipop" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tv_mobile_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+
+                    <com.pragyaware.anu.solarpack.mUtil.CEditText
+                        android:id="@+id/ed_mobile_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorAccent"
+                        android:hint="@string/mobile_no"
+                        android:padding="10dp"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        tools:targetApi="lollipop" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/ms_white"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    tools:targetApi="lollipop">
+
+                    <TextView
+                        android:id="@+id/latlng_txtVw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:hint="@string/lat_lng"
+                        android:padding="10dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textColorHint="#33658A"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@mipmap/address_icon"
+                        android:contentDescription="@string/name" />
+
+
+                    <EditText
+                        android:id="@+id/address_edtVw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/iv_2"
+                        android:backgroundTint="@color/ms_white"
+                        android:gravity="center"
+                        android:hint="@string/address"
+                        android:inputType="textAutoComplete"
+                        android:padding="10dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textColorHint="#939393"
+                        android:textSize="14sp"
+                        tools:ignore="RtlHardcoded"
+                        tools:targetApi="lollipop" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@mipmap/district_icon"
+                        android:contentDescription="@string/name" />
+
+
+                    <EditText
+                        android:id="@+id/district_edtVw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/iv_1"
+                        android:backgroundTint="@color/ms_white"
+                        android:gravity="center"
+                        android:hint="@string/districtt"
+                        android:inputType="textAutoComplete"
+                        android:padding="10dp"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textColorHint="#939393"
+                        android:textSize="14sp"
+                        tools:ignore="RtlHardcoded"
+                        tools:targetApi="lollipop" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/l4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <!--<android.support.design.widget.TextInputLayout-->
+                    <!--android:id="@+id/tv_mobile_no"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:textColor="@color/colorPrimaryDark"-->
+                    <!--android:textSize="16sp"-->
+                    <!--android:textStyle="bold">-->
+
+                    <!--<com.pragyaware.anu.solarpack.mUtil.CEditText-->
+                    <!--android:id="@+id/ed_mobile_no"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:backgroundTint="@color/colorAccent"-->
+                    <!--android:hint="@string/mobile_no"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:inputType="number"-->
+                    <!--android:maxLength="10"-->
+                    <!--android:textColorHint="@color/colorPrimaryDark"-->
+                    <!--android:textColor="@color/colorPrimaryDark"-->
+                    <!--android:textSize="16sp" />-->
+                    <!--</android.support.design.widget.TextInputLayout>-->
+
+
+                    <com.pragyaware.anu.solarpack.mUtil.TextViewBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/status"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+                    <Spinner
+                        android:id="@+id/kyc_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:padding="5dp" />
+                    <!--<RadioGroup-->
+                        <!--android:id="@+id/statusRadioGrp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:padding="5dp">-->
+
+                        <!--<RadioButton-->
+                            <!--android:id="@+id/progressRadio"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:button="@drawable/custom_radio"-->
+                            <!--android:gravity="center"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:text="@string/in_progress"-->
+                            <!--android:textColor="@color/colorPrimaryDark"-->
+                            <!--android:textSize="14sp" />-->
+
+
+                        <!--<RadioButton-->
+                            <!--android:id="@+id/completeRadio"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="10dp"-->
+                            <!--android:button="@drawable/custom_radio"-->
+                            <!--android:gravity="center"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:text="@string/completed"-->
+                            <!--android:textColor="@color/colorPrimaryDark"-->
+                            <!--android:textSize="14sp" />-->
+
+
+                    <!--</RadioGroup>-->
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:ignore="NestedWeights">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tv_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone">
+
+                        <com.pragyaware.anu.solarpack.mUtil.CEditText
+                            android:id="@+id/ed_remarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorAccent"
+                            android:hint="@string/remarks"
+                            android:padding="10dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorPrimaryDark"
+                            android:textSize="16sp"
+                            tools:targetApi="lollipop" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.pragyaware.anu.solarpack.mUtil.TextViewRegular
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:text="@string/photographs_of_the_equipment"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="15sp" />
+
+
+                        <ImageView
+                            android:id="@+id/captureImgVw1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:contentDescription="@string/app_name"
+                            android:padding="5dp"
+                            android:src="@drawable/photo_camera"
+                            tools:ignore="RtlHardcoded" />
+
+                    </LinearLayout>
+
+
+                    <GridView
+                        android:id="@+id/photoGrid1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4"
+                        android:verticalSpacing="10dp"
+                        android:horizontalSpacing="10dp"
+                        android:padding="5dp"
+                        tools:ignore="NestedScrolling" />
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/completedLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content">-->
+
+                        <!--<com.pragyaware.anu.solarpack.mUtil.TextViewRegular-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:text="@string/photographs_of_the_equipment"-->
+                            <!--android:textColor="@color/colorPrimaryDark"-->
+                            <!--android:textSize="15sp" />-->
+
+
+                        <!--<ImageView-->
+                            <!--android:id="@+id/captureImgVw"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginRight="5dp"-->
+                            <!--android:contentDescription="@string/app_name"-->
+                            <!--android:padding="5dp"-->
+                            <!--android:src="@drawable/photo_camera" />-->
+
+                    <!--</LinearLayout>-->
+
+
+                    <!--<GridView-->
+                        <!--android:id="@+id/photoGrid"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:numColumns="4"-->
+                        <!--android:verticalSpacing="10dp"-->
+                        <!--android:horizontalSpacing="10dp"-->
+                        <!--android:padding="5dp" />-->
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_bg"
+                android:gravity="center"
+                android:text="@string/submit"
+                android:textColor="#ffffff" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
